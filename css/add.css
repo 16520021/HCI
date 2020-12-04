@@ -1,0 +1,88 @@
+.form-control-custom {
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid grey;
+    width: inherit;
+    margin-bottom: 2.5rem;
+    font-size: 1.25em;
+}
+
+.form-control-custom:focus {
+    outline: none;
+}
+
+.form-group textarea {
+    width: inherit;
+    background-color: inherit;
+}
+
+.note-title {
+    position: absolute;
+    top: -1.2rem;
+    left: 2.5rem;
+    font-size: 1.25em;
+    background-color: inherit;
+}
+
+.note-image {
+    position: absolute;
+    left: 2rem;
+    top: -2.5rem;
+}
+
+@media (min-width:768px) {
+    .note-image {
+        width: 70px;
+        left: 2.5rem;
+        top: -1.5rem;
+    }
+}
+
+.font-size-1p25 {
+    font-size: 1.25rem;
+}
+
+#type-promotion {
+    margin: 0 15px;
+}
+
+#branch-promotion {
+    margin: 0 15px;
+}
+
+.section-title {
+    background-color: #BB6BD9;
+    color: white;
+    padding-left: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+table {
+    width: inherit;
+}
+
+.width-51 {
+    width: 51%;
+}
+
+.percent-ico {
+    width: 24px;
+    text-align: center;
+    color: white;
+    border: 5px solid #6c757d;
+}
+
+.currency-ico {
+    border: 5px solid #4CAF50;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#type-promotion a {
+    text-decoration: none;
+}
+
+#branch-promotion a {
+    text-decoration: none;
+}

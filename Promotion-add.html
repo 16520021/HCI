@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/add.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Promotion List</title>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand d-none d-lg-block" href="#"><img width="48" class="img-fluid" src="./images/company.png"
+                alt="company">
+            <caption>University of Information Technology</caption>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active mx-4" href="#">Trợ giúp</a>
+                <a class="nav-item nav-link mx-4" href="#">Liên hệ</a>
+                <a class="nav-item nav-link mx-4" href="#">Tải công cụ</a>
+                <a class="nav-item nav-link mx-4" href="#">Thiết lập</a>
+                <a class="nav-item nav-link mx-4 d-lg-none d-md-block" href="#">Tài khoản</a>
+            </div>
+        </div>
+        <a class="nav-link d-none d-lg-block" href="#"><img width="48" class="img-fluid" src="./images/user.png"
+                alt="user"></a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-start my-3" id="page-title">
+                <h2>Thêm chương trình khuyến mại</h2>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group d-flex">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control-custom" placeholder="Mã chương trình" name="id-promotion"
+                            value="KM120520" required disabled/>
+                        <br>
+                        <input type="text" class="form-control-custom" placeholder="Tên chương trình"
+                            name="name-promotion" required />
+                        <p class="font-size-1p25">Trạng thái:</p>
+                        <input class="mr-1" type="radio" name="status" value="inactive" id="inactive"><label
+                            for="inactive">Kích
+                            hoạt</label><br>
+
+                        <input class="mr-1" type="radio" name="status" value="active" id="active"><label
+                            for="active">Chưa kích
+                            hoạt</label><br>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="note-image" src="./images/note-trick.png" class="image-fluid" alt="Ghi chú">
+                        <p class="note-title">Ghi chú</p>
+                        <textarea name="note" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <div id="type-promotion">
+                    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        <h4 class="section-title">Hình thức khuyến mại</h4>
+                    </a>
+                    <div class="row collapse" id="collapseExample">
+                        <div class="col-md-6 pr-md-0 my-2">
+                            <p class="d-inline-block">Khuyến mãi theo:</p>
+                            <select class="col-md-5" name="type" id="type" aria-placeholder="Khuyến mãi theo">
+                                <option value="bill">Hóa đơn</option>
+                                <option value="product">Hàng hóa</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 pl-md-0 my-2">
+                            <p class="d-inline-block">Hình thức:</p>
+                            <select class="col-md-5" name="type-follow" id="type-follow" aria-placeholder="Hình thức">
+                                <option value="reduce-bill">Gỉam giá hóa đơn</option>
+                                <option value="reduce-product">Gỉam giá mặt hàng</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Tổng tiền</th>
+                                        <th>Gỉam giá</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="width-51">
+                                            <div class="d-flex align-items-center">
+                                                <div class="mr-2"><b>Từ</b></div>
+                                                <input class="form-control col-sm-7" type="text" required>
+                                            </div>
+                                        </td>
+                                        <td class="width-51">
+                                            <div class="d-flex align-items-center">
+                                                <input class="form-control col-sm-7" type="text" required>
+                                                <div class="mx-2 currency-ico"><b>VND</b></div>
+                                                <div class="bg-secondary percent-ico"><b>%</b></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="branch-promotion">
+                    <a data-toggle="collapse" href="#collapseBranch" role="button" aria-expanded="false"
+                        aria-controls="collapseBranch">
+                        <h4 class="section-title">Chi nhánh áp dụng</h4>
+                    </a>
+                    <div class="row collapse" id="collapseBranch">
+                        <div class="col-12 col-md-6">
+                            <div class="col-12 mt-2">
+                                <input class="mr-1" type="radio" id="all-branches" name="branch"
+                                    value="all-branch"><label for="all-branches">Tất cả chi nhánh</label>
+                            </div>
+                            <div class="col-12 my-3">
+                                <input class="mr-1" type="radio" id="branch" name="branch" value="branch"><label
+                                    for="branch">Chi nhánh:
+                                </label>
+                                <select class="form-control d-inline-block col-sm-4" name="branches" id="branches">
+                                    <option value="1">Quận 1</option>
+                                    <option value="2">Quận 2</option>
+                                    <option value="3">Quận 3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <div class="col-12 mt-2">
+                                <input class="mr-1" type="radio" id="all-customers" name="customer"
+                                    value="all-customer"><label for="all-customers">Tất cả khách hàng</label>
+                            </div>
+                            <div class="col-12 my-3">
+                                <input class="mr-1" type="radio" id="customer" name="customer" value="customer"><label
+                                    for="customer">Nhóm khách hàng:
+                                </label>
+                                <select class="form-control d-inline-block col-sm-4" name="customers" id="customers">
+                                    <option value="1">VIP</option>
+                                    <option value="2">Thường</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="time-promotion"></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
