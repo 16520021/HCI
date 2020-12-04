@@ -1,0 +1,23 @@
+#filter-section {
+    border-right:  1px solid black;
+}
+
+#filter-section .filter-section-title {
+    background-color: #BB6BD9;
+    color: white;
+    padding-left: 0.25rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+#filter-section input {
+    width: -webkit-fill-available;
+}
+
+div.selection-group {
+    margin-bottom: 2rem;
+}
+
+.bg-green {
+    background-color: #4CAF50;
+}
