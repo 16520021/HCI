@@ -76,6 +76,11 @@ nav .navbar-nav a::after {
     background-color: transparent;
 }
 
+nav .navbar-nav a:hover {
+    color: #9615db !important;
+    transition: 0.75s ease-in-out;
+}
+
 nav .navbar-nav a:hover::after {
     background-color: rgb(156, 114, 178);
     width: 200px;
