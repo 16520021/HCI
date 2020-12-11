@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/add.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Promotion List</title>
+    <title>Add Promotion</title>
 </head>
 
 <body class="bg-light">
@@ -34,7 +34,7 @@
                 alt="user"></a>
     </nav>
 
-    <div class="container">
+    <div class="container bg-white mt-4">
         <div class="row">
             <div class="col-md-12 d-flex justify-content-start my-3" id="page-title">
                 <h2>Thêm chương trình khuyến mại</h2>
@@ -44,7 +44,7 @@
                 <div class="form-group d-flex">
                     <div class="col-md-6">
                         <input type="text" class="form-control-custom" placeholder="Mã chương trình" name="id-promotion"
-                            value="KM120520" required disabled/>
+                            value="KM120520" required disabled />
                         <br>
                         <input type="text" class="form-control-custom" placeholder="Tên chương trình"
                             name="name-promotion" required />
@@ -158,8 +158,54 @@
                         </div>
                     </div>
                 </div>
-                <div id="time-promotion"></div>
-                <div></div>
+                <div id="time-promotion">
+                    <a data-toggle="collapse" href="#collapseTime" role="button" aria-expanded="false"
+                        aria-controls="collapseTime">
+                        <h4 class="section-title">Thời gian áp dụng</h4>
+                    </a>
+                    <div class="row collapse" id="collapseTime">
+                        <div class="col-12">
+                            <div class="mx-3 mt-2">
+                                <p>
+                                    <label class="mr-md-3" for="datetime-from"><b>Thời gian: </b></label>
+                                    <input class="form-control d-md-inline-block col-12 col-md-4" type="datetime-local"
+                                        name="datetime-from" id="datetime-from">
+                                    <span><b>đến: </b></span>
+                                    <input class="form-control d-md-inline-block col-12 col-md-4" type="datetime-local"
+                                        name="datetime-to" id="datetime-to">
+                                </p>
+                                <p>
+                                    <label for="month"><b>Theo tháng:</b></label>
+                                    <input class="form-control d-md-inline-block col-12 col-md-4" type="month"
+                                        name="month" id="month">
+                                </p>
+                                <p>
+                                    <label class="mr-md-2" for="day"><b>Theo ngày:</b></label>
+                                    <input class="form-control d-md-inline-block col-12 col-md-4" type="text" name="day"
+                                        id="day" placeholder="dd/mm, cách dấu phẩy">
+                                </p>
+                                <input class=" ml-6r mr-1" type="checkbox" name="birthday" id="birthday"><label
+                                    for="birthday">Áp dụng vào ngày sinh nhật khách hàng</label>
+                                <p>
+                                    <label class="mr-md-3" for="dayvn"><b>Theo thứ:</b></label>
+                                    <input class="form-control d-md-inline-block col-12 col-md-4" type="text" name="dayvn"
+                                        id="dayvn" placeholder="Số ứng với thứ, cách dấu phẩy">
+                                </p>
+                                <p>
+                                    <label class="mr-md-3" for="time"><b>Theo giờ:</b></label>
+                                        <input class="form-control d-md-inline-block col-12 col-md-4" type="time" name="time"
+                                            id="time">
+                                </p>
+                                <input class=" ml-6r mr-1" type="checkbox" name="warning" id="warning"><label
+                                    for="warning">Cảnh báo khách hàng khuyến mãi này đã được hưởng.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex mb-4 align-items-center justify-content-end">
+                        <button class="rounded border py-2 px-4 border-success mr-1 bg-green text-white"><b>Lưu</b></button>
+                        <button class="rounded border py-2 px-4 mr-3 border-secondary bg-secondary text-white"><b>Hủy</b></button>
+                </div>
             </div>
         </div>
     </div>

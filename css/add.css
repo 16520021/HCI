@@ -50,6 +50,10 @@
     margin: 0 15px;
 }
 
+#time-promotion {
+    margin: 0 15px;
+}
+
 .section-title {
     background-color: #BB6BD9;
     color: white;
@@ -85,4 +89,12 @@ table {
 
 #branch-promotion a {
     text-decoration: none;
+}
+
+#time-promotion a {
+    text-decoration: none;
+}
+
+.ml-6r {
+    margin-left: 6rem;
 }
