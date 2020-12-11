@@ -21,3 +21,63 @@ div.selection-group {
 .bg-green {
     background-color: #4CAF50;
 }
+
+.bg-violet {
+    background-color: #9615db;
+}
+
+/* nav .navbar-nav a:hover {
+    background-color: white;
+    color: #9615db !important;
+    transition: 0.5s ease-in-out;
+} */
+
+.navbar-nav a {
+    justify-content: start;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .navbar-collapse {
+        height: 64px;
+    }
+
+    .navbar-nav {
+        height: inherit;
+    }
+
+    .navbar-nav a {
+        justify-content: center;
+    }
+}
+
+.bg-deep-violet {
+    background-color: rgb(57, 16, 84);
+}
+
+tbody tr {
+    background-color: white;
+}
+
+tbody tr:hover {
+    background-color: rgb(156, 114, 178);
+}
+
+.text-violet {
+    color: #9615db !important;
+}
+
+nav .navbar-nav a::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    top: 3.8rem;
+    height: 3px;
+    background-color: transparent;
+}
+
+nav .navbar-nav a:hover::after {
+    background-color: rgb(156, 114, 178);
+    width: 200px;
+    transition: 0.5s ease-in-out;
+}
