@@ -5,14 +5,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/add.css">
     <title>Promotion List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg p-0 navbar-light bg-white">
-        <a class="navbar-brand d-none d-lg-block text-violet" href="#"><img width="48" class="img-fluid" src="./images/company.png"
-                alt="company"><caption>University of Information Technology</caption></a>
+        <a class="navbar-brand d-none d-lg-block text-violet" href="#"><img width="48" class="img-fluid"
+                src="./images/company.png" alt="company">
+            <caption>University of Information Technology</caption>
+        </a>
         <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -75,8 +78,8 @@
                         <option value="15">15</option>
                     </select>
                 </div>
-                <button class="d-none d-md-block d-lg-none rounded border border-danger bg-danger text-white"
-                    type="button" class="btn btn-primary" data-toggle="modal" data-target="#filterModal">
+                <button class="d-md-none rounded border border-danger bg-danger text-white" type="button"
+                    class="btn btn-primary" data-toggle="modal" data-target="#filterModal">
                     <b>Open Filter</b>
                 </button>
             </div>
@@ -123,43 +126,139 @@
                 </table>
             </div>
 
+            <div class="col-lg-10 d-none" id="detail-section">
+                <a class="nav-link back-btn" href="#">&larr;Back</a>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-target="#general-info" href="#">Thông tin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-target="#type-info" href="#">Hình thức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-target="history-purchase" href="#">Lịch sử đặt hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-target="history-bill" href="#">Lịch sử hóa đơn</a>
+                    </li>
+                </ul>
+                <div id="general-info" class="bg-white px-4 pt-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span class="font-size-1p25 font-weight-bold">Mã chương trình:</span><input type="text"
+                                class="form-control-custom" placeholder="Mã chương trình" name="id-promotion"
+                                value="KM111020" required disabled /><br>
+                            <span class="font-size-1p25 font-weight-bold">Thời gian:</span><input type="text"
+                                class="form-control-custom" name="time-promotion"
+                                value="11/10/2020 01:20 - 16/10/2020 01:20" required disabled /><br>
+                            <span class="font-size-1p25 font-weight-bold">Theo tháng:</span><input type="text"
+                                class="form-control-custom" name="month-promotion" required disabled /><br>
+                            <span class="font-size-1p25 font-weight-bold">Theo ngày:</span><input type="text"
+                                class="form-control-custom" name="day-promotion" required disabled /><br>
+                            <span class="font-size-1p25 font-weight-bold">Theo thứ:</span><input type="text"
+                                class="form-control-custom" name="thu-promotion" required disabled /><br>
+                            <span class="font-size-1p25 font-weight-bold">Theo giờ:</span><input type="text"
+                                class="form-control-custom" name="hour-promotion" required disabled />
+                        </div>
+
+                        <div class="col-md-6">
+                            <span class="font-size-1p25 font-weight-bold">Tên chương trình:</span><input type="text"
+                                class="form-control-custom" name="name-promotion" value="Tưng bừng Nhà Gíao" required
+                                disabled /><br>
+                            <p class="font-size-1p25 font-weight-bold">Trạng thái:</p>
+                            <input class="mr-1" type="radio" name="status" value="inactive" id="inactive" checked><label
+                                for="inactive">Kích
+                                hoạt</label><br>
+                            <input class="mr-1" type="radio" name="status" value="active" id="active"><label
+                                for="active">Chưa
+                                kích
+                                hoạt</label><br>
+                            <span class="font-size-1p25 font-weight-bold">Ghi chú:</span><input type="text"
+                                class="form-control-custom" name="note-promotion" required disabled />
+
+                        </div>
+                    </div>
+                </div>
+                <div id="type-info" class="d-none bg-white">
+                    <h2><a class="nav-link" href="#">Hoá đơn - giảm giá hóa đơn</a></h2>
+                    <div class="col-md-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Tổng tiền</th>
+                                    <th>Gỉam giá</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="width-51">
+                                        <div class="d-flex align-items-center">
+                                            <div class="mr-2"><b>Từ</b></div>
+                                            <input class="form-control col-sm-7" value="100.000" type="text" disabled required>
+                                        </div>
+                                    </td>
+                                    <td class="width-51">
+                                        <div class="d-flex align-items-center">
+                                            <input class="form-control col-sm-7" value="10" type="text" disabled required>
+                                            <div class="mx-2 currency-ico"><b>VND</b></div>
+                                            <div class="bg-secondary percent-ico"><b>%</b></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="close invisible" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="history-purchase" class="d-none bg-white">
+                    abcasdasdasd
+                </div>
+                <div id="history-bill" class="d-none bg-white">
+                    abcasdasdasd
+                </div>
+            </div>
+
             <!-- Mobile table-->
             <div class="col-sm-12 d-block d-md-none" id="content-table-mobile">
-                    <table class="table table-striped table-hover">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">Mã</th>
-                                <th scope="col">Tên chương trình</th>
-                                <th scope="col">Trạng thái</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">KM111020</th>
-                                <td>Hóa đơn - giảm giá HD</td>
-                                <td class="text-success">Kích hoạt</td>
-                                <td class="text-muted text-right"><i>chi tiết >></i></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">KM201120</th>
-                                <td>Nhà giáo việt nam</td>
-                                <td class="text-danger">Tạm ngưng</td>
-                                <td class="text-muted text-right"><i>chi tiết >></i></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">KM230820</th>
-                                <td>Tưng bừng tựu trường</td>
-                                <td class="text-muted">Hoàn thành</td>
-                                <td class="text-muted text-right"><i>chi tiết >></i></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <table class="table table-striped table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Mã</th>
+                            <th scope="col">Tên chương trình</th>
+                            <th scope="col">Trạng thái</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">KM111020</th>
+                            <td>Hóa đơn - giảm giá HD</td>
+                            <td class="text-success">Kích hoạt</td>
+                            <td class="text-muted text-right"><i>chi tiết >></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">KM201120</th>
+                            <td>Nhà giáo việt nam</td>
+                            <td class="text-danger">Tạm ngưng</td>
+                            <td class="text-muted text-right"><i>chi tiết >></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">KM230820</th>
+                            <td>Tưng bừng tựu trường</td>
+                            <td class="text-muted">Hoàn thành</td>
+                            <td class="text-muted text-right"><i>chi tiết >></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
-    <!-- Mobile Modal -->
+    <!-- Mobile filter Modal -->
     <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -214,6 +313,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+    <script src="./js/vew.js"></script>
 </body>
 
 </html>
