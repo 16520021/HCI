@@ -86,3 +86,11 @@ nav .navbar-nav a:hover::after {
     width: 200px;
     transition: 0.5s ease-in-out;
 }
+
+.bg-yellow {
+    background-color: bisque;
+}
+
+#content-table-mobile {
+    background-color: white;
+}

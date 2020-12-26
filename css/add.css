@@ -78,8 +78,7 @@ table {
 }
 
 .currency-ico {
-    border: 5px solid #4CAF50;
-    background-color: #4CAF50;
+    border: 5px solid #6c757d;
     color: white;
 }
 
@@ -97,4 +96,22 @@ table {
 
 .ml-6r {
     margin-left: 6rem;
+}
+
+@media (max-width: 767.98px) {
+    #history-purchase .col-md-12{
+        overflow-x: scroll;
+    }
+
+    #history-bill .col-md-12{
+        overflow-x: scroll;
+    }
+
+    #detail-section {
+        background-color: white;
+    }
+
+    #type-info .col-md-12 {
+        overflow-x: scroll;
+    }
 }

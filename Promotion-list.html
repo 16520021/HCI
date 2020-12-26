@@ -136,13 +136,13 @@
                         <a class="nav-link" data-target="#type-info" href="#">Hình thức</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-target="history-purchase" href="#">Lịch sử đặt hàng</a>
+                        <a class="nav-link" data-target="#history-purchase" href="#">Lịch sử đặt hàng</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-target="history-bill" href="#">Lịch sử hóa đơn</a>
+                        <a class="nav-link" data-target="#history-bill" href="#">Lịch sử hóa đơn</a>
                     </li>
                 </ul>
-                <div id="general-info" class="bg-white px-4 pt-2">
+                <div id="general-info" class="bg-white px-4 py-2">
                     <div class="row">
                         <div class="col-md-6">
                             <span class="font-size-1p25 font-weight-bold">Mã chương trình:</span><input type="text"
@@ -175,14 +175,15 @@
                                 hoạt</label><br>
                             <span class="font-size-1p25 font-weight-bold">Ghi chú:</span><input type="text"
                                 class="form-control-custom" name="note-promotion" required disabled />
-
+                            <button type="button" class="btn btn-success">Cập nhật</button>
+                            <button type="button" class="btn btn-danger">Xóa</button>
                         </div>
                     </div>
                 </div>
-                <div id="type-info" class="d-none bg-white">
+                <div id="type-info" class="d-none bg-white px-4 py-2">
                     <h2><a class="nav-link" href="#">Hoá đơn - giảm giá hóa đơn</a></h2>
                     <div class="col-md-12">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered mb-1">
                             <thead>
                                 <tr>
                                     <th>Tổng tiền</th>
@@ -194,31 +195,107 @@
                                 <tr>
                                     <td class="width-51">
                                         <div class="d-flex align-items-center">
-                                            <div class="mr-2"><b>Từ</b></div>
-                                            <input class="form-control col-sm-7" value="100.000" type="text" disabled required>
+                                                <div class="mr-2 d-none d-md-block"><b>Từ</b></div>
+                                                <input class="form-control col-sm-7" value="100.000" type="text" disabled required>
                                         </div>
                                     </td>
                                     <td class="width-51">
                                         <div class="d-flex align-items-center">
-                                            <input class="form-control col-sm-7" value="10" type="text" disabled required>
-                                            <div class="mx-2 currency-ico"><b>VND</b></div>
+                                            <input class="form-control col-sm-7" value="10" type="text" disabled
+                                                required>
+                                            <div class="mx-2 currency-ico bg-secondary d-none d-md-block"><b>VND</b></div>
                                             <div class="bg-secondary percent-ico"><b>%</b></div>
                                         </div>
                                     </td>
                                     <td>
-                                        <button type="button" class="close invisible" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button></td>
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="mt-0 mb-3">
+                            <button id="add-condition" type="button" class="btn btn-primary">Thêm dk</button>
+                        </div>
+                        <button type="button" class="btn btn-success">Cập nhật</button>
+                        <button type="button" class="btn btn-danger">Xóa</button>
                     </div>
                 </div>
-                <div id="history-purchase" class="d-none bg-white">
-                    abcasdasdasd
+                <div id="history-purchase" class="d-none bg-white px-4 py-2">
+                    <div class="col-md-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Mã phiếu</th>
+                                    <th>Thời gian</th>
+                                    <th>Người nhận đặt</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Gỉam giá khuyến mại</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-yellow">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right"><b>800.000</b></td>
+                                    <td class="text-right"><b>720.000</b></td>
+                                </tr>
+                                <tr>
+                                    <td><a class="nav-link active font-weight-bold" href="#">DH00001</a></td>
+                                    <td>20/11/2020 14:51</td>
+                                    <td>Admin</td>
+                                    <td class="text-right">500.000</td>
+                                    <td class="text-right">450.000</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="nav-link font-weight-bold" href="#">DH00002</a></td>
+                                    <td>20/11/2020 17:21</td>
+                                    <td>Admin</td>
+                                    <td class="text-right">300.000</td>
+                                    <td class="text-right">270.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div id="history-bill" class="d-none bg-white">
-                    abcasdasdasd
+                <div id="history-bill" class="d-none bg-white px-4 py-2">
+                    <div class="col-md-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Mã phiếu</th>
+                                    <th>Thời gian</th>
+                                    <th>Người bán</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Gỉam giá khuyến mại</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-yellow">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right"><b>1.000.000</b></td>
+                                    <td class="text-right"><b>900.000</b></td>
+                                </tr>
+                                <tr>
+                                    <td><a class="nav-link active font-weight-bold" href="#">HD00001</a></td>
+                                    <td>20/11/2020 14:51</td>
+                                    <td>Admin</td>
+                                    <td class="text-right">500.000</td>
+                                    <td class="text-right">450.000</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="nav-link font-weight-bold" href="#">HD00002</a></td>
+                                    <td>20/11/2020 17:21</td>
+                                    <td>Admin</td>
+                                    <td class="text-right">500.000</td>
+                                    <td class="text-right">450.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
