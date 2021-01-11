@@ -1,3 +1,7 @@
+body {
+    letter-spacing: 0.5px;
+}
+
 #filter-section {
     border-right:  1px solid black;
 }
