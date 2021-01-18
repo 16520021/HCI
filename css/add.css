@@ -36,6 +36,10 @@
         left: 2.5rem;
         top: -1.5rem;
     }
+
+    .ml-6r {
+        margin-left: 6rem;
+    }
 }
 
 .font-size-1p25 {
@@ -92,10 +96,6 @@ table {
 
 #time-promotion a {
     text-decoration: none;
-}
-
-.ml-6r {
-    margin-left: 6rem;
 }
 
 @media (max-width: 767.98px) {
